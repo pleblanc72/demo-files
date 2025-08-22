@@ -1,0 +1,12 @@
+expression fab_sql_server = "tqxvbj5rcwxe5kn42myrurvk64-5nubxietiopuzjexeqklmijuga.database.fabric.microsoft.com,1433" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 149eb730-6d20-4d21-8bda-e45913b03aeb
+
+	annotation PBI_ResultType = Text
+
+expression fab_sql_database = "dag_sqldatabase-e9029d8e-92cb-4ae4-a0e7-2ccc7c6c69c3" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 116025b8-3fea-43dc-bf3a-b1d74c248ba1
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

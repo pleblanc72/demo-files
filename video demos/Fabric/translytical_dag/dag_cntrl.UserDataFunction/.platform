@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "UserDataFunction",
+    "displayName": "dag_cntrl"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f5c55423-3743-9867-4b6c-6dbb9f4601a3"
+  }
+}

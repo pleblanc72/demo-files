@@ -1,0 +1,27 @@
+table 'Node Notebooks'
+	lineageTag: 00e10938-0b3f-49a7-b2cd-5b45e3be5e05
+
+	column Node
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(150)
+		lineageTag: 719510c4-6745-40d2-b9a2-0df80a20e2e8
+		summarizeBy: none
+		sourceColumn: Node
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Node Notebooks' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database(fab_sql_server, fab_sql_database),
+				    dbo_notebooks = Source{[Schema="dbo",Item="notebooks"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_notebooks,{{"name", "Node"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

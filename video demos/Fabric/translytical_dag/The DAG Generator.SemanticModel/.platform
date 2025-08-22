@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "The DAG Generator"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "641b825a-40d0-a884-46a3-b65cc8d62fcc"
+  }
+}

@@ -1,0 +1,23 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["Node Notebooks","Edge Notebooks","DAG_Graph","fab_sql_server","fab_sql_database"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.145.1602.0 (25.07)+10647c9fa319b5e39936cdb21328038c371d1fe4
+
+ref table 'Node Notebooks'
+ref table 'Edge Notebooks'
+ref table 'Timeout Per Cell In Seconds'
+ref table Retry
+ref table 'Retry Interval In Seconds'
+ref table DAG_Graph
+
+ref cultureInfo en-US
+

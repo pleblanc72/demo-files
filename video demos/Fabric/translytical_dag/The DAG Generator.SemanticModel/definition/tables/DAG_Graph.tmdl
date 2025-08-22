@@ -1,0 +1,34 @@
+table DAG_Graph
+	lineageTag: 76982f59-bdc3-4c45-b3d4-0650519be6a5
+
+	column Edge
+		dataType: string
+		sourceProviderType: varchar(150)
+		lineageTag: 4d65c791-db5c-4bc5-961c-aacc7da4355a
+		summarizeBy: none
+		sourceColumn: Edge
+
+		annotation SummarizationSetBy = Automatic
+
+	column Node
+		dataType: string
+		sourceProviderType: varchar(150)
+		lineageTag: 20f6e8b6-8d3e-4930-9726-269418f2bbf4
+		summarizeBy: none
+		sourceColumn: Node
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DAG_Graph = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database(fab_sql_server, fab_sql_database),
+				    dbo_DAG_Graph = Source{[Schema="dbo",Item="DAG_Graph"]}[Data]
+				in
+				    dbo_DAG_Graph
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

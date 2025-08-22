@@ -1,0 +1,26 @@
+table 'Retry Interval In Seconds'
+	lineageTag: 8917294a-cde0-4700-8bc2-555a1c32dab9
+
+	measure 'Retry Interval In Seconds Value' = SELECTEDVALUE('Retry Interval In Seconds'[Retry Interval In Seconds])
+		formatString: 0
+		lineageTag: 99820535-7267-4274-8b16-d4fdb6f2667b
+
+	column 'Retry Interval In Seconds'
+		formatString: 0
+		lineageTag: 15b8fa31-c46e-40be-a146-f7ee65a236be
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Retry Interval In Seconds' = calculated
+		mode: import
+		source = GENERATESERIES(0, 10, 1)
+
+	annotation PBI_Id = 26651e19aad6475982e4e3560bf8016e
+

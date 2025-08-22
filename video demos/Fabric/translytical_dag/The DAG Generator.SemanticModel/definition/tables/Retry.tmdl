@@ -1,0 +1,26 @@
+table Retry
+	lineageTag: 30b0a123-7237-474e-a653-3481264c985e
+
+	measure 'Retry Value' = SELECTEDVALUE('Retry'[Retry])
+		formatString: 0
+		lineageTag: 2dc59b78-4574-4696-a268-5260d74d1fdb
+
+	column Retry
+		formatString: 0
+		lineageTag: f17bb492-62f4-4e19-b318-5b76fe8faf09
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition Retry = calculated
+		mode: import
+		source = GENERATESERIES(0, 5, 1)
+
+	annotation PBI_Id = 46cb536f668946c588068e49a2e0cd55
+

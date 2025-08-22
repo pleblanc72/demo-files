@@ -1,0 +1,134 @@
+{
+  "Runtime": "PYTHON",
+  "FunctionsMetadata": [
+    {
+      "Name": "export_DAG",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricSqlConnection",
+          "Alias": "dagsqldatabase",
+          "AudienceType": null,
+          "Name": "graphSQL",
+          "Direction": "In",
+          "Type": "FabricItem"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricLakehouseClient",
+          "Alias": "daglakehouse",
+          "AudienceType": null,
+          "Name": "lakeFolder",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": null
+      }
+    },
+    {
+      "Name": "add_DAG_node",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricSqlConnection",
+          "Alias": "daggraph",
+          "AudienceType": null,
+          "Name": "graphSQL",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [
+          {
+            "dataType": "str",
+            "name": "name"
+          },
+          {
+            "dataType": "str",
+            "name": "path"
+          },
+          {
+            "dataType": "int",
+            "name": "timeoutPerCellInSeconds"
+          },
+          {
+            "dataType": "int",
+            "name": "retry"
+          },
+          {
+            "dataType": "int",
+            "name": "retryIntervalInSeconds"
+          }
+        ],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": null
+      }
+    },
+    {
+      "Name": "add_DAG_edge",
+      "ScriptFile": "function_app.py",
+      "Bindings": [
+        {
+          "Methods": [
+            "POST"
+          ],
+          "Route": "",
+          "AuthLevel": "Anonymous",
+          "Name": "req",
+          "Direction": "In",
+          "Type": "HttpTrigger"
+        },
+        {
+          "ItemType": null,
+          "SubType": "FabricSqlConnection",
+          "Alias": "daggraph",
+          "AudienceType": null,
+          "Name": "graphSQL",
+          "Direction": "In",
+          "Type": "FabricItem"
+        }
+      ],
+      "FabricProperties": {
+        "fabricFunctionParameters": [
+          {
+            "dataType": "str",
+            "name": "nodeName"
+          },
+          {
+            "dataType": "str",
+            "name": "edgeName"
+          }
+        ],
+        "fabricFunctionReturnType": "str",
+        "fabricMetadataSchemaVersion": null
+      }
+    }
+  ]
+}

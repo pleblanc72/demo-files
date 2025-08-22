@@ -1,0 +1,27 @@
+table 'Edge Notebooks'
+	lineageTag: 88c9b43e-05f0-4b1d-b301-b6fb8d26ab3c
+
+	column Edge
+		dataType: string
+		isNullable: false
+		sourceProviderType: varchar(150)
+		lineageTag: 826b93d6-e504-429e-b787-5ff2cfcd7792
+		summarizeBy: none
+		sourceColumn: Edge
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Edge Notebooks' = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database(fab_sql_server, fab_sql_database),
+				    dbo_notebooks = Source{[Schema="dbo",Item="notebooks"]}[Data],
+				    #"Renamed Columns" = Table.RenameColumns(dbo_notebooks,{{"name", "Edge"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

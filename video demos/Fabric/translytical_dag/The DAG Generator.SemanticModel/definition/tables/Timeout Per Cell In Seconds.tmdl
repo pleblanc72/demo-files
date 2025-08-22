@@ -1,0 +1,26 @@
+table 'Timeout Per Cell In Seconds'
+	lineageTag: dfc0cf5f-16c0-4957-b9fb-3b5c8014055e
+
+	measure 'Timeout Per Cell In Seconds Value' = SELECTEDVALUE('Timeout Per Cell In Seconds'[Timeout Per Cell In Seconds], 120)
+		formatString: 0
+		lineageTag: f2e2b04f-63c4-4178-84a1-ed74988c4cd5
+
+	column 'Timeout Per Cell In Seconds'
+		formatString: 0
+		lineageTag: 885238ef-d793-4d3a-9546-bc85fda4c2f9
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Timeout Per Cell In Seconds' = calculated
+		mode: import
+		source = GENERATESERIES(0, 120, 10)
+
+	annotation PBI_Id = fa687f0fe3c1421db20199c545a1aa60
+
