@@ -3,16 +3,16 @@
   "runtime": "PYTHON",
   "connectedDataSources": [
     {
-      "alias": "daglakehouse",
-      "artifactId": "36dac943-9465-4108-8842-01d20c57b711",
+      "alias": "daglakehouse1",
+      "artifactId": "f86c7951-f922-bfde-4b4b-a9949f3149ae",
       "artifactType": "Lakehouse",
-      "workspaceId": "a01b68eb-4393-4c9f-a497-2414b6213430"
+      "workspaceId": "00000000-0000-0000-0000-000000000000"
     },
     {
-      "alias": "dagsqldatabase",
-      "artifactId": "e9029d8e-92cb-4ae4-a0e7-2ccc7c6c69c3",
+      "alias": "dagsqldatabase1",
+      "artifactId": "c0bc9f80-73b0-8035-4e60-0dcb473b4e35",
       "artifactType": "SqlDbNative",
-      "workspaceId": "a01b68eb-4393-4c9f-a497-2414b6213430"
+      "workspaceId": "00000000-0000-0000-0000-000000000000"
     }
   ],
   "functions": [

@@ -18,7 +18,7 @@
         {
           "ItemType": null,
           "SubType": "FabricSqlConnection",
-          "Alias": "dagsqldatabase",
+          "Alias": "dagsqldatabase1",
           "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
@@ -27,7 +27,7 @@
         {
           "ItemType": null,
           "SubType": "FabricLakehouseClient",
-          "Alias": "daglakehouse",
+          "Alias": "daglakehouse1",
           "AudienceType": null,
           "Name": "lakeFolder",
           "Direction": "In",
@@ -37,7 +37,7 @@
       "FabricProperties": {
         "fabricFunctionParameters": [],
         "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": null
+        "fabricMetadataSchemaVersion": "1.0.0"
       }
     },
     {
@@ -57,7 +57,7 @@
         {
           "ItemType": null,
           "SubType": "FabricSqlConnection",
-          "Alias": "daggraph",
+          "Alias": "dagsqldatabase1",
           "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
@@ -88,7 +88,7 @@
           }
         ],
         "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": null
+        "fabricMetadataSchemaVersion": "1.0.0"
       }
     },
     {
@@ -108,7 +108,7 @@
         {
           "ItemType": null,
           "SubType": "FabricSqlConnection",
-          "Alias": "daggraph",
+          "Alias": "dagsqldatabase1",
           "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
@@ -127,7 +127,7 @@
           }
         ],
         "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": null
+        "fabricMetadataSchemaVersion": "1.0.0"
       }
     }
   ]

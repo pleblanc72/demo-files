@@ -14,7 +14,6 @@
 
 LakehouseName = 'dag_lakehouse1'
 SQLDatabaseName ='dag_sqldatabase1'
-SemanticModelNam = 'dag_SemanticModel3'
 
 # METADATA ********************
 
@@ -26,7 +25,6 @@ SemanticModelNam = 'dag_SemanticModel3'
 # CELL ********************
 
 %pip install -q semantic-link-labs
-%pip install -q azure-storage-blob
 
 # METADATA ********************
 
@@ -41,11 +39,6 @@ import sempy_labs as labs
 from sempy import fabric
 import sempy
 import pandas as pd 
-import re
-from azure.storage.blob import BlobClient
-import json
-from powerbiclient import Report
-import sempy_labs.report._report_helper as helper
 
 # METADATA ********************
 

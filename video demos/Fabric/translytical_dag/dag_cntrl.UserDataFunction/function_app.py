@@ -2,8 +2,8 @@ import fabric.functions as fn
 
 udf = fn.UserDataFunctions()
 
-@udf.connection(argName="graphSQL", alias="dagsqldatabase")
-@udf.connection(argName="lakeFolder", alias="daglakehouse")
+@udf.connection(argName="graphSQL", alias="dagsqldatabase1")
+@udf.connection(argName="lakeFolder", alias="daglakehouse1")
 @udf.function()
 def export_DAG(graphSQL: fn.FabricSqlConnection, lakeFolder: fn.FabricLakehouseClient) -> str:
 
@@ -42,7 +42,7 @@ def export_DAG(graphSQL: fn.FabricSqlConnection, lakeFolder: fn.FabricLakehouseC
     return f"The DAG containing {dag_string} will be written to a file named {txtFileName} in the {lakeFolder.alias_name} Lakehouse."
 
 
-@udf.connection(argName="graphSQL", alias="daggraph")
+@udf.connection(argName="graphSQL", alias="dagsqldatabase1")
 @udf.function()
 def add_DAG_node(graphSQL: fn.FabricSqlConnection,  name: str, path: str, timeoutPerCellInSeconds: int, retry: int, retryIntervalInSeconds: int) -> str:
     
@@ -61,7 +61,7 @@ def add_DAG_node(graphSQL: fn.FabricSqlConnection,  name: str, path: str, timeou
     sqlConnection.close()
     return f"Node added to Graph {insert_node_query}"
 
-@udf.connection(argName="graphSQL", alias="daggraph")
+@udf.connection(argName="graphSQL", alias="dagsqldatabase1")
 @udf.function()
 def add_DAG_edge(graphSQL: fn.FabricSqlConnection,  nodeName: str, edgeName: str) -> str:
     
