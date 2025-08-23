@@ -19,7 +19,6 @@
           "ItemType": null,
           "SubType": "FabricSqlConnection",
           "Alias": "dagsqldatabase1",
-          "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
           "Type": "FabricItem"
@@ -28,7 +27,6 @@
           "ItemType": null,
           "SubType": "FabricLakehouseClient",
           "Alias": "daglakehouse1",
-          "AudienceType": null,
           "Name": "lakeFolder",
           "Direction": "In",
           "Type": "FabricItem"
@@ -36,8 +34,7 @@
       ],
       "FabricProperties": {
         "fabricFunctionParameters": [],
-        "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": "1.0.0"
+        "fabricFunctionReturnType": "str"
       }
     },
     {
@@ -58,7 +55,6 @@
           "ItemType": null,
           "SubType": "FabricSqlConnection",
           "Alias": "dagsqldatabase1",
-          "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
           "Type": "FabricItem"
@@ -87,8 +83,7 @@
             "name": "retryIntervalInSeconds"
           }
         ],
-        "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": "1.0.0"
+        "fabricFunctionReturnType": "str"
       }
     },
     {
@@ -109,7 +104,6 @@
           "ItemType": null,
           "SubType": "FabricSqlConnection",
           "Alias": "dagsqldatabase1",
-          "AudienceType": null,
           "Name": "graphSQL",
           "Direction": "In",
           "Type": "FabricItem"
@@ -126,8 +120,7 @@
             "name": "edgeName"
           }
         ],
-        "fabricFunctionReturnType": "str",
-        "fabricMetadataSchemaVersion": "1.0.0"
+        "fabricFunctionReturnType": "str"
       }
     }
   ]
